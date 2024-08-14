@@ -43,4 +43,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // app/Models/User.php
+
+public function portfolio()
+{
+    return $this->hasOne(Portfolio::class);
+}
+
+
+public function alumniProfile()
+{
+    return $this->hasOne(AlumniProfile::class);
+}
 }

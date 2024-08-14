@@ -24,6 +24,17 @@
                     <x-nav-link :href="url('permissions')" :active="request()->routeIs('permissions')">
                         {{ __('Permissions') }}
                     </x-nav-link>
+                    <!-- New Jobs and Job Applications Links -->
+                    <x-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs.*')">
+                        {{ __('Jobs') }}
+                    </x-nav-link>
+                    <x-nav-link :href="url('job-applications')" :active="request()->routeIs('job-applications')">
+                        {{ __('Job Applications') }}
+                    </x-nav-link>
+                    <!-- Portfolio Link -->
+                    <x-nav-link :href="route('portfolios.index')" :active="request()->routeIs('portfolios.index')">
+                        {{ __('My Portfolio') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -78,6 +89,17 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <!-- Responsive Jobs and Job Applications Links -->
+            <x-responsive-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs.*')">
+                {{ __('Jobs') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="url('job-applications')" :active="request()->routeIs('job-applications')">
+                {{ __('Job Applications') }}
+            </x-responsive-nav-link>
+            <!-- Responsive Portfolio Link -->
+            <x-responsive-nav-link :href="route('portfolios.index')" :active="request()->routeIs('portfolios.index')">
+                {{ __('My Portfolio') }}
             </x-responsive-nav-link>
         </div>
 
