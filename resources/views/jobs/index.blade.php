@@ -13,7 +13,8 @@
 
     <!-- Show "Create New Job" button only for non-alumni users -->
     @unless(auth()->user()->role === 'alumni')
-        <a href="{{ route('jobs.create') }}" class="btn btn-primary mb-3">Create New Job</a>
+    <a href="{{ route('jobs.create', ['job' => 1]) }}" class="btn btn-primary">Create New Job</a>
+
     @endunless
 
     <div class="row">

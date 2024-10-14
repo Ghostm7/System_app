@@ -15,26 +15,6 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="url('users')" :active="request()->routeIs('users')">
-                        {{ __('Users') }}
-                    </x-nav-link>
-                    <x-nav-link :href="url('roles')" :active="request()->routeIs('roles')">
-                        {{ __('Roles') }}
-                    </x-nav-link>
-                    <x-nav-link :href="url('permissions')" :active="request()->routeIs('permissions')">
-                        {{ __('Permissions') }}
-                    </x-nav-link>
-                    <!-- New Jobs and Job Applications Links -->
-                    <x-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs.*')">
-                        {{ __('Jobs') }}
-                    </x-nav-link>
-                    <x-nav-link :href="url('job-applications')" :active="request()->routeIs('job-applications')">
-                        {{ __('Job Applications') }}
-                    </x-nav-link>
-                    <!-- Portfolio Link -->
-                    <x-nav-link :href="route('portfolios.index')" :active="request()->routeIs('portfolios.index')">
-                        {{ __('My Portfolio') }}
-                    </x-nav-link>
                 </div>
             </div>
 
@@ -44,7 +24,6 @@
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->name }}</div>
-
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -89,17 +68,6 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-            <!-- Responsive Jobs and Job Applications Links -->
-            <x-responsive-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs.*')">
-                {{ __('Jobs') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="url('job-applications')" :active="request()->routeIs('job-applications')">
-                {{ __('Job Applications') }}
-            </x-responsive-nav-link>
-            <!-- Responsive Portfolio Link -->
-            <x-responsive-nav-link :href="route('portfolios.index')" :active="request()->routeIs('portfolios.index')">
-                {{ __('My Portfolio') }}
             </x-responsive-nav-link>
         </div>
 

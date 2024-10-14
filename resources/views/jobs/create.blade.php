@@ -28,6 +28,12 @@
             </div>
         @endif
 
+        <!-- Link to create a new job -->
+        <a href="{{ route('jobs.create', ['job' => 1]) }}" class="btn btn-primary">Create New Job</a>
+
+
+
+
         <form action="{{ route('jobs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">

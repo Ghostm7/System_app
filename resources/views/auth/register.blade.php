@@ -19,25 +19,34 @@
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
+            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Confirm Password -->
         <div class="mt-4">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
+            <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
+
+      <!-- Role Selection -->
+<div class="mt-4">
+    <span class="block text-sm font-medium text-gray-700">Select Role:</span>
+    <div class="mt-2 flex items-center">
+        <input type="checkbox" id="role_super_admin" name="role[]" value="super-admin" class="mr-2" />
+        <label for="role_super_admin">Super-Admin</label>
+    </div>
+    <div class="mt-2 flex items-center">
+        <input type="checkbox" id="role_admin" name="role[]" value="admin" class="mr-2" />
+        <label for="role_admin">Admin</label>
+    </div>
+    <div class="mt-2 flex items-center">
+        <input type="checkbox" id="role_alumni" name="role[]" value="alumni" class="mr-2" />
+        <label for="role_alumni">Alumni</label>
+    </div>
+</div>
+
 
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
